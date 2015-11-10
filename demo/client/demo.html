@@ -1,0 +1,26 @@
+<head>
+  <title>demo</title>
+</head>
+
+<body bgcolor='#AAAAAA'>
+    <div class="row cells12">
+        <div class="cell colspan8">
+        </div>
+        <div class="cell colspan4">
+            <a class='dropdown-button btn' href='#' data-activates='dropdown1'>
+            Drop Me!
+            </a>
+            <ul id='dropdown1' class='dropdown-content'>
+                <li><a href="#!">one</a></li>
+                <li><a href="#!">two</a></li>
+                <li class="divider"></li>
+                <li><a href="#!">three</a></li>
+            </ul>
+        </div>
+    </div>
+  {{> main }} 
+</body>
+
+<template name="main">
+  <p>We've always been at war with {{theEnemy}}.</p>
+</template>

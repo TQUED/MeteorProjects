@@ -1,0 +1,34 @@
+<template name="forgot">
+ <div class="page not-found">
+    <nav>
+      <div class="nav-group">
+        <a href="#" class="js-menu nav-item"><span class="icon-list-unordered"></span></a>
+      </div>
+    </nav>
+    <form action="/forgot" id="forgotPasswordForm" method="post">
+      <input id="forgotPasswordEmail" type="text" name="email" placeholder="Email Address">
+      <input class="btn-submit" type="submit" value="Send">
+    </form>
+ </div>
+    <!-- end #forgot-password-form -->
+
+</template>
+
+<template name="reset">
+  <div class="page not-found">
+    <nav>
+      <div class="nav-group">
+        <a href="#" class="js-menu nav-item"><span class="icon-list-unordered"></span></a>
+      </div>
+    </nav>
+    {{#if resetPassword}}
+    <form action="/reset-password"  id="resetPasswordForm" method="post">
+        <input id="resetPasswordPassword" name="password" placeholder="New Password" type="password" >
+        <input id="resetPasswordPasswordConfirm" name="password-confirm" placeholder="Confirm" type="password" >
+        <input class="btn-submit" type="submit" value="Reset">
+    </form>
+    <!-- end #reset-password-form -->
+    {{/if}}
+  </div>
+
+</template>
